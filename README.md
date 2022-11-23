@@ -1,5 +1,4 @@
 # RadarBlasters
-RadarBlasters is a two player game created using Java utilizing various data structures and algorithms.
 
 RadarBlasters is a two player game. Each player picks a robot and 5 weapons. Player 1 will move the robot with
 WASD, Q to freeze robot2, and E to use weapon. Player 2 will move the robot with arrow keys, SHIFT to freeze
