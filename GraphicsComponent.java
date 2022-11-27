@@ -27,13 +27,13 @@ public class GraphicsComponent extends JComponent
     private static final double MULT = 0.4;
     private static final float COLOR_NUM = 0.9f;
 
-    private Robot robot1;
-    private Robot robot2;
-    private Rectangle rect1x;
-    private Rectangle rect1y;
-    private Rectangle rect2x;
-    private Rectangle rect2y;
-    private TreeMap<Weapon, Color> bulletColors;
+    private final Robot robot1;
+    private final Robot robot2;
+    private final Rectangle rect1x;
+    private final Rectangle rect1y;
+    private final Rectangle rect2x;
+    private final Rectangle rect2y;
+    private final TreeMap<Weapon, Color> bulletColors;
     Ellipse2D.Double firstPlayerExplosion;
     Ellipse2D.Double secondPlayerExplosion;
     private Weapon firstPlayerWeapon;
@@ -149,7 +149,7 @@ public class GraphicsComponent extends JComponent
      */
     public TreeMap<Weapon, Color> createWeaponColors(TreeSet<Weapon> bank)
     {
-        TreeMap<Weapon, Color> mapping = new TreeMap<Weapon, Color>();
+        TreeMap<Weapon, Color> mapping = new TreeMap<>();
         for (Weapon w : bank)
         {
             int dmg = w.getDamage();
@@ -197,30 +197,12 @@ public class GraphicsComponent extends JComponent
     }
 
     /**
-     * Determines if there is an explosion for Robot1
-     * @return boolean
-     */
-    public boolean isFirst()
-    {
-        return first;
-    }
-
-    /**
      * Sets the boolean for first explosion
      * @param first boolean
      */
     public void setFirst(boolean first)
     {
         this.first = first;
-    }
-
-    /**
-     * Determines if there is an explosion for Robot2
-     * @return boolean
-     */
-    public boolean isSecond()
-    {
-        return second;
     }
 
     /**

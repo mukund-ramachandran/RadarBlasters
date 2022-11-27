@@ -26,19 +26,6 @@ public class RobotNode
     }
 
     /**
-     * Constructs a node with the given initValue and left and right children
-     * @param initValue the value to store in node
-     * @param initLeft left child
-     * @param initRight right child
-     */
-    public RobotNode(Robot initValue, RobotNode initLeft, RobotNode initRight)
-    {
-        value = initValue;
-        left = initLeft;
-        right = initRight;
-    }
-
-    /**
      * Returns the Robot object
      * @return Robot object
      */

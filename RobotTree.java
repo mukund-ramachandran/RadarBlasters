@@ -1,6 +1,6 @@
 /**
  * The RobotTree class creates a binary tree of RobotNodes to be used to store Robot objects
- * in RadarBlasterSimulaton. It has methods to add and remove Robots to the tree and retrieve
+ * in RadarBlasterSimulation. It has methods to add and remove Robots to the tree and retrieve
  * the parent node of a given node.
  * @authors Akshara Ganapathi, Mukund Ramachandran, Sanjeet Verma
  * Collaborators: None
@@ -111,7 +111,7 @@ public class RobotTree
     private RobotNode recursiveRemove(Robot r, RobotNode node)
     {
         if (node == null)
-            return node;
+            return null;
         int diff = r.compareTo(node.getValue());
         if (diff == 0)
             return removeHelper(node);

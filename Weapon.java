@@ -10,9 +10,9 @@
 
 public class Weapon implements Comparable<Weapon>
 {
-    private String name;
-    private int damage;
-    private int range;
+    private final String name;
+    private final int damage;
+    private final int range;
 
     /**
      * Creates Weapon object

@@ -71,15 +71,6 @@ public class Robot implements Comparable<Robot>
     }
 
     /**
-     * Returns max health
-     * @return max health
-     */
-    public int getMaxHealth()
-    {
-        return maxHealth;
-    }
-
-    /**
      * Returns if Robot can shoot a weapon
      * @return boolean representation
      */
@@ -122,14 +113,6 @@ public class Robot implements Comparable<Robot>
     public Color getRobotColor()
     {
         return robotColor;
-    }
-
-    /**
-     * Resets current health back to max health
-     */
-    public void resetHealth()
-    {
-        this.currentHealth = this.maxHealth;
     }
 
     /**
