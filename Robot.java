@@ -2,7 +2,8 @@
  * The Robot class creates a PVP robot that a player controls that has a certain name
  * health, speed, and color. The player moves this Robot around the frame and can control
  * when it shoots weapons.
- * @authors Akshara Ganapathi, Mukund Ramachandran, Sanjeet Verma
+ *
+ * @author Akshara Ganapathi, Mukund Ramachandran, Sanjeet Verma
  * Collaborators: None
  * Teacher Name: Ms. Bailey
  * Period: 03/05
@@ -11,8 +12,7 @@
 
 import java.awt.*;
 
-public class Robot implements Comparable<Robot>
-{
+public class Robot implements Comparable<Robot> {
     private static final int RIGHT_BOUND = 950;
     private static final int LEFT_BOUND = 40;
     private static final int UPPER_BOUND = 150;
@@ -36,8 +36,7 @@ public class Robot implements Comparable<Robot>
      * @param speed given speed
      * @param color given Color
      */
-    public Robot(String name, int maxHealth, int speed, Color color)
-    {
+    public Robot(String name, int maxHealth, int speed, Color color) {
         this.name = name;
         this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
@@ -53,9 +52,8 @@ public class Robot implements Comparable<Robot>
      * Reduces current health of robot
      * @param change amount change
      */
-    public void subtractCurrentHealth(int change)
-    {
-        if((this.currentHealth - change) < 0)
+    public void subtractCurrentHealth(int change) {
+        if ((this.currentHealth - change) < 0)
             currentHealth = 0;
         else
             this.currentHealth -= change;
@@ -65,8 +63,7 @@ public class Robot implements Comparable<Robot>
      * Returns name of Robot
      * @return String name
      */
-    public String getName()
-    {
+    public String getName() {
         return this.name;
     }
 
@@ -74,8 +71,7 @@ public class Robot implements Comparable<Robot>
      * Returns if Robot can shoot a weapon
      * @return boolean representation
      */
-    public boolean canShoot()
-    {
+    public boolean canShoot() {
         return canShoot;
     }
 
@@ -83,8 +79,7 @@ public class Robot implements Comparable<Robot>
      * Determines if Robot can shoot or not
      * @param canShoot boolean that determines
      */
-    public void setCanShoot(boolean canShoot)
-    {
+    public void setCanShoot(boolean canShoot) {
         this.canShoot = canShoot;
     }
 
@@ -92,8 +87,7 @@ public class Robot implements Comparable<Robot>
      * Returns current health
      * @return current health
      */
-    public int getCurrentHealth()
-    {
+    public int getCurrentHealth() {
         return currentHealth;
     }
 
@@ -101,8 +95,7 @@ public class Robot implements Comparable<Robot>
      * Returns Robot speed
      * @return Robot speed
      */
-    public int getSpeed()
-    {
+    public int getSpeed() {
         return speed;
     }
 
@@ -110,8 +103,7 @@ public class Robot implements Comparable<Robot>
      * Returns Color
      * @return Color object
      */
-    public Color getRobotColor()
-    {
+    public Color getRobotColor() {
         return robotColor;
     }
 
@@ -135,8 +127,7 @@ public class Robot implements Comparable<Robot>
      * Returns x-value of Robot
      * @return x-value
      */
-    public int getX()
-    {
+    public int getX() {
         return this.x;
     }
 
@@ -144,8 +135,7 @@ public class Robot implements Comparable<Robot>
      * Returns y-value of Robot
      * @return y-value
      */
-    public int getY()
-    {
+    public int getY() {
         return this.y;
     }
 
@@ -154,8 +144,7 @@ public class Robot implements Comparable<Robot>
      * @param xNew new x-value
      * @param yNew new y-value
      */
-    public void setLocation(int xNew, int yNew)
-    {
+    public void setLocation(int xNew, int yNew) {
         this.x = xNew;
         this.y = yNew;
     }
@@ -165,8 +154,7 @@ public class Robot implements Comparable<Robot>
      * @param xAmt x increment
      * @param yAmt y increment
      */
-    public void changeLocation(int xAmt, int yAmt)
-    {
+    public void changeLocation(int xAmt, int yAmt) {
         this.x += xAmt;
         if (x > RIGHT_BOUND)
             x = RIGHT_BOUND;
@@ -185,8 +173,7 @@ public class Robot implements Comparable<Robot>
      * @return String format
      */
     @Override
-    public String toString()
-    {
+    public String toString() {
         String part1 = "Name: " + this.name;
         String part2 = ", Health: " + this.maxHealth;
         String part3 = ", Speed: " + this.speed;
@@ -198,8 +185,7 @@ public class Robot implements Comparable<Robot>
      * Displays color of robot
      * @return String representation
      */
-    public String displayColor()
-    {
+    public String displayColor() {
         return this.robotColor.toString().substring(SUBSTRING);
     }
 
@@ -208,8 +194,7 @@ public class Robot implements Comparable<Robot>
      * @param other other Robot
      * @return whether its greater or not based on health
      */
-    public int compareTo(Robot other)
-    {
+    public int compareTo(Robot other) {
         return this.maxHealth - other.maxHealth;
     }
 
