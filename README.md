@@ -8,6 +8,4 @@ health wins the game. Freeze powerup lasts 5 seconds, weapons can only be used o
 when a player is using their weapon, the other robot is briefly paused.
 
 Created and developed by:
-Akshara Ganapathi
-Mukund Ramachandran
-Sanjeet Verma
+Akshara Ganapathi, Mukund Ramachandran, Sanjeet Verma
